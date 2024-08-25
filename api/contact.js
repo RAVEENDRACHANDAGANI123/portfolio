@@ -1,4 +1,5 @@
-import { google } from 'googleapis';
+const { google } = require('googleapis');
+
 
 // Initialize the Google Sheets API with your API key
 const sheets = google.sheets({
