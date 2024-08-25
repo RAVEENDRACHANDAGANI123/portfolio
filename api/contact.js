@@ -1,6 +1,9 @@
 import { google } from 'googleapis';
 
-const sheets = google.sheets({ version: 'v4', auth: process.env.GOOGLE_API_KEY });
+const sheets = google.sheets({
+  version: 'v4',
+  auth: 'sustained-digit-433509-k4', 
+});
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -11,7 +14,7 @@ export default async function handler(req, res) {
     }
 
     const request = {
-      spreadsheetId: process.env.SPREADSHEET_ID,
+      spreadsheetId: '164VbM_FV1LBa6fysopTjx7iofd1PqLgBGsg2vkbUgyw', 
       range: 'Sheet1!A1:C1',
       valueInputOption: 'RAW',
       resource: {
@@ -30,3 +33,4 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' });
   }
 }
+
