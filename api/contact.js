@@ -2,7 +2,7 @@ import { google } from 'googleapis';
 
 const sheets = google.sheets({
   version: 'v4',
-  auth: 'sustained-digit-433509-k4', 
+  auth: 'lucky-display-365819', 
 });
 
 export default async function handler(req, res) {
