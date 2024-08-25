@@ -25,12 +25,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing fields' });
     }
 
+    // Capture the current date and time
+    const timestamp = new Date().toLocaleString(); 
+
     const request = {
       spreadsheetId: '164VbM_FV1LBa6fysopTjx7iofd1PqLgBGsg2vkbUgyw', // Your spreadsheet ID
-      range: 'Sheet1!A1:C1',
+      range: 'Sheet1!A1:D1',
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, email, message]],
+        values: [[name, email, message, timestamp]],
       },
     };
 
