@@ -18,15 +18,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (response.ok) {
       // Show the success pop-up
       const popup = document.getElementById('popup-message');
-      popup.style.display = 'block';
+      popup.style.display = 'block'; // Ensure it's shown
 
       // Hide the pop-up after 3 seconds
       setTimeout(() => {
         popup.style.display = 'none';
       }, 3000);
-
-      // Reset the form
-      document.getElementById('contactForm').reset();
 
     } else {
       alert('Failed to send message.');
