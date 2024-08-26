@@ -16,7 +16,7 @@
 .popup-content {
   background-color: #ffffff;
   color: #333; /* Your site's text color */
-  margin: 15px; 
+  margin: 0; /* Reset margin */
   padding: 20px;
   border: 1px solid #888;
   text-align: center;
