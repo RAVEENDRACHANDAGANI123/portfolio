@@ -1,54 +1,50 @@
-/* Popup container */
+/* CSS for pop-up visibility control */
 .popup {
   display: none; /* Hidden by default */
-  position: fixed; 
-  z-index: 1050; /* Ensure it sits above other content */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); /* Center the popup */
-  width: auto; /* Adjust width as needed */
-  max-width: 400px; /* Optional: set a max-width */
+  position: fixed;
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
   background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
-  border-radius: 8px; /* Optional: add rounded corners */
 }
 
-/* Popup content */
 .popup-content {
   background-color: #ffffff;
-  color: #333; /* Your site's text color */
-  margin: 0; /* Reset margin */
+  color: #333;
+  margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
+  width: 80%; 
+  max-width: 300px;
   text-align: center;
   position: relative;
 }
 
-/* Close button */
 .popup-close {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  color: #aaaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
   font-size: 20px;
   font-weight: bold;
 }
 
 .popup-close:hover,
 .popup-close:focus {
-  color: #3333; /* Your site's text color */
+  color: #333;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Success icon */
 .popup-icon {
   width: 50px;
   margin-bottom: 15px;
 }
 
-/* Style for success message */
 .popup-content p {
-  color: green; /* Your site's primary color */
-  font-size: 30px;
+  color: green;
+  font-size: 18px;
   font-weight: bold;
 }
