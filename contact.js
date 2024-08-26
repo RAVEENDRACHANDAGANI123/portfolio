@@ -25,6 +25,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
         popup.style.display = 'none';
       }, 3000);
 
+      // Reset the form
+      document.getElementById('contactForm').reset();
+
     } else {
       alert('Failed to send message.');
     }
