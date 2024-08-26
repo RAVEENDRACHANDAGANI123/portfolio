@@ -25,17 +25,17 @@
 
 /* Close button */
 .popup-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: #aaa;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  color: #aaaa;
   font-size: 20px;
   font-weight: bold;
 }
 
 .popup-close:hover,
 .popup-close:focus {
-  color: #333; /* Your site's text color */
+  color: #3333; /* Your site's text color */
   text-decoration: none;
   cursor: pointer;
 }
@@ -49,6 +49,6 @@
 /* Style for success message */
 .popup-content p {
   color: green; /* Your site's primary color */
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
 }
