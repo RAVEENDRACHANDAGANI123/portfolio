@@ -25,15 +25,18 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing fields' });
     }
 
-    // Capture the current date and time
-    const timestamp = new Date().toLocaleString(); 
+     // Get current date and time in IST
+    const now = new Date();
+    const istOffset = 5 * 60 * 60 * 1000 + 30 * 60 * 1000; // IST offset in milliseconds (5 hours 30 minutes)
+    const istTime = new Date(now.getTime() + istOffset).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+
 
     const request = {
       spreadsheetId: '164VbM_FV1LBa6fysopTjx7iofd1PqLgBGsg2vkbUgyw', // Your spreadsheet ID
       range: 'Sheet1!A1:D1',
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, email, message, timestamp]],
+        values: [[name, email, message, istTime]],
       },
     };
 
